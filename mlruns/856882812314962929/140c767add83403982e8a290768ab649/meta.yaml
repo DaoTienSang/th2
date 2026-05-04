@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/lab_CNM/NTT/SinhVien/mlruns/856882812314962929/140c767add83403982e8a290768ab649/artifacts
+end_time: 1777875451884
+entry_point_name: ''
+experiment_id: '856882812314962929'
+lifecycle_stage: active
+run_id: 140c767add83403982e8a290768ab649
+run_name: rf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777875446932
+status: 3
+tags: []
+user_id: Admin
