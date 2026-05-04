@@ -1,9 +1,6 @@
-from pathlib import Path
-
 import pandas as pd
 
-from src.data_pipeline import run
-from src.paths import dd
+from data_pipeline import dd, run
 
 
 def test_data_pipeline():

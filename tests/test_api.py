@@ -1,9 +1,11 @@
 import json
+from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-from src.paths import md
-from src.serve import app
+from app import app
+
+md = Path(__file__).resolve().parents[1] / "models"
 
 
 def test_predict():

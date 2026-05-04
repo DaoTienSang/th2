@@ -1,23 +1,13 @@
 import json
 import re
-from datetime import datetime
 from pathlib import Path
 
-import joblib
-import mlflow
-import mlflow.sklearn
 import numpy as np
 import pandas as pd
-from fastapi import FastAPI
 
 rt = Path(__file__).resolve().parent
 dd = rt / "data"
 md = rt / "models"
-ld = rt / "logs"
-mlr = rt / "mlruns"
-mlflow.set_tracking_uri(mlr.resolve().as_uri())
-app = FastAPI(title="churn api")
-mm = None
 
 
 def cn(x):
@@ -58,30 +48,9 @@ def drift(df, th=3.0):
     return rs
 
 
-def load():
-    global mm
-    if mm is not None:
-        return mm
-    try:
-        mm = mlflow.sklearn.load_model("models:/churn_model/Production")
-    except Exception:
-        mm = joblib.load(md / "best_model.pkl")
-    return mm
-
-
-@app.get("/")
-def home():
-    return {"status": "ok"}
-
-
-@app.post("/predict")
-def predict(x: dict):
-    m = load()
-    tb = prep(x)
-    y = int(m.predict(tb)[0])
-    p = float(m.predict_proba(tb)[0][1]) if hasattr(m, "predict_proba") else float(y)
-    dr = drift(tb)
-    ld.mkdir(exist_ok=True)
-    with (ld / "predictions.jsonl").open("a", encoding="utf-8") as f:
-        f.write(json.dumps({"time": datetime.utcnow().isoformat(), "input": x, "label": y, "probability": p, "drift": dr}, ensure_ascii=False) + "\n")
-    return {"label": y, "probability": p, "drift": bool(dr), "drift_features": dr}
+if __name__ == "__main__":
+    if (md / "sample_input.json").exists():
+        x = json.loads((md / "sample_input.json").read_text(encoding="utf-8"))
+        print(drift(prep(x)))
+    else:
+        print("train model first")
