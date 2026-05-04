@@ -1,0 +1,16 @@
+creation_timestamp: 1777877240918
+current_stage: Staging
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1777877241057
+model_id: m-aee48c21d68945d19d297ab750300718
+name: churn_model
+run_id: cd2dbde388224496a9c14a058f4ea80a
+run_link: null
+source: models:/m-aee48c21d68945d19d297ab750300718
+status: READY
+status_message: null
+storage_location: file:///D:/lab_CNM/NTT/SinhVien/mlruns/921503751703742745/models/m-aee48c21d68945d19d297ab750300718/artifacts
+user_id: null
+version: 2
+workspace: default

@@ -1,0 +1,36 @@
+{
+  "features": [
+    "age",
+    "gender",
+    "tenure",
+    "usage_frequency",
+    "support_calls",
+    "payment_delay",
+    "subscription_type",
+    "contract_length",
+    "total_spend",
+    "last_interaction",
+    "spend_per_tenure",
+    "call_delay_ratio",
+    "usage_recent_score",
+    "spend_usage_ratio"
+  ],
+  "num": [
+    "age",
+    "tenure",
+    "usage_frequency",
+    "support_calls",
+    "payment_delay",
+    "total_spend",
+    "last_interaction",
+    "spend_per_tenure",
+    "call_delay_ratio",
+    "usage_recent_score",
+    "spend_usage_ratio"
+  ],
+  "cat": [
+    "gender",
+    "subscription_type",
+    "contract_length"
+  ]
+}

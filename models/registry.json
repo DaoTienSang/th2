@@ -1,0 +1,16 @@
+[
+  {
+    "name": "rf",
+    "version": 1,
+    "val_f1": 0.9947368421052631,
+    "test_f1": 0.9936708860759493,
+    "stage": "Production"
+  },
+  {
+    "name": "lr",
+    "version": 2,
+    "val_f1": 0.872974385781495,
+    "test_f1": 0.8741584671154842,
+    "stage": "Staging"
+  }
+]

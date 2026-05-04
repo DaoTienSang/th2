@@ -1,0 +1,10 @@
+artifact_location: file:///D:/lab_CNM/NTT/SinhVien/mlruns/921503751703742745/models/m-aee48c21d68945d19d297ab750300718/artifacts
+creation_timestamp: 1777877223656
+experiment_id: '921503751703742745'
+last_updated_timestamp: 1777877231634
+model_id: m-aee48c21d68945d19d297ab750300718
+model_type: null
+name: model
+source_run_id: cd2dbde388224496a9c14a058f4ea80a
+status: 2
+status_message: null
